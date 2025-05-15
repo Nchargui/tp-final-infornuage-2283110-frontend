@@ -1,0 +1,113 @@
+.tabContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -3px;
+}
+
+.tabItem {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin: 0;
+}
+
+.tabItem.activeTab {
+    border-bottom: 4px solid #086788;
+    font-weight: bold;
+    color: #086788;
+}
+
+.submissionImages {
+    margin-top: 10px;
+}
+
+.imageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.submissionImage {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.submissionAddress {
+    color: black;
+    margin-top: 0;
+}
+
+.submissionTitle {
+    color: #3134C8;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.submissionPrice {
+    color: #3134C8;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.submissionStatus {
+    /*background: #FFB02E;
+    color: black;*/
+    font-weight: bold;
+    padding: 10px;
+    width: 70px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.statusAccepted {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.statusRefused {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.statusPending {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.submissionCard{
+    border: 3px solid #BDE3FF;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 175px;
+}
+
+.defaultMessage {
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+    color: gray;
+    margin: 0;
+}

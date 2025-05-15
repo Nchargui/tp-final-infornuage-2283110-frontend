@@ -1,0 +1,106 @@
+.profileCard {
+    background: #BDE3FF;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.profileCardUserCircle {
+    background: #086788;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileCardUserPicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.profileCardCredentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    color: black;
+    margin-bottom: 0;
+}
+
+.profileCardFullName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.profileCardPersonalInfo {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profileCardButtonContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.profileCardButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    margin: 10px;
+    width: 125px;
+}
+
+.modifyButton {
+    background: #086788;
+    color: white;
+}
+
+.deleteButton {
+    background: #FF6F61;
+    color: black;
+}
+
+.buttonIcon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 610px) {
+    .profileCard {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profileCardUserCircle {
+        margin-bottom: 10px;
+    }
+
+    .profileCardCredentials {
+        margin-left: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profileCardButtonContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+}

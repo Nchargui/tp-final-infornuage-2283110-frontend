@@ -1,0 +1,50 @@
+.sloganBackground {
+    background-color: #E2F3FF;
+    width: 100%;
+}
+
+.sloganText {
+    color: #3134C8;
+    font-size: 40px;
+    text-align: left;
+    margin: 70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 1100px) {
+    .sloganText {
+        width: 800px;
+        padding-right: 200px;
+    }
+
+    .searchContainer form {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+
+
+}
+
+@media (max-width: 1100px) {
+    .sloganText {
+        width: 350px;
+    }
+
+
+
+
+}

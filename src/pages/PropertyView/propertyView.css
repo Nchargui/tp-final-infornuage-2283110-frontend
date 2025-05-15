@@ -1,0 +1,198 @@
+body {
+    background-color: white;
+    background-size: contain;
+
+}
+
+
+.containerProperty p, .containerProperty h1 {
+    color: #192175;
+}
+
+.containerProperty h1 {
+    font-size: 40px
+}
+
+.containerPrice {
+    padding-left: 20px;
+}
+
+.containerProperty {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.containerAddress h1 {
+    display: inline-flex;
+    font-weight: lighter;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.containerPrice {
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.containerPrice h1 {
+    font-size: 35px;
+}
+
+
+.priceAddress {
+    display: flex;
+    padding: 10px 0 0 0;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.containerProperty .carouselProperty {
+
+    overflow: hidden;
+    align-items: center;
+    /*padding: 10px 30px 10px 30px;*/
+
+}
+
+
+.containerProperty .swiperSlideImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.containerProperty .swiperSlideImage {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+}
+
+.agentContainer img {
+    height: 100px;
+
+
+}
+
+.agentContainer {
+    background: #aed5e1;
+    display: flex;
+    padding: 20px;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.agentDetails {
+    text-align: start;
+
+}
+
+.nameAgent {
+    display: inline-flex;
+
+}
+
+.nameAgent p {
+    padding: 2px;
+    font-weight: 500;
+
+}
+
+.containerDetails {
+    display: grid;
+    font-size: 20px;
+    justify-content: space-between;
+
+
+}
+
+.containerDetails p {
+    gap: 1rem;
+
+}
+
+.descAgent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    gap: 7rem;
+
+}
+
+.descAgent .agentContainer {
+    padding-top: 20px;
+}
+
+
+@media (max-width: 900px) {
+    .containerProperty .swiperSlideImage {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .containerAddress h1 {
+        display: inline-flex;
+        font-weight: lighter;
+        padding: 5px;
+
+    }
+
+    .containerPrice {
+        display: inline-flex;
+        font-size: 20px;
+    }
+
+    .priceAddress {
+        display: block;
+        padding: 10px 0px 0px 0px;
+
+
+    }
+
+    .descAgent {
+        display: block;
+    }
+
+
+}
+
+@media (min-width: 600px) {
+    .containerDetails {
+        grid-template-columns:
+
+repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 900px) {
+    .containerDetails {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerDetails {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.year, .area {
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+

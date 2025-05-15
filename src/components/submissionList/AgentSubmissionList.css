@@ -1,0 +1,41 @@
+.submissionLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.propertySection {
+    flex: 2;
+    box-sizing: border-box;
+}
+
+.clientCard {
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .requestContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .statusButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .propertySection, .clientCard {
+        width: 100%;
+        text-align: center;
+    }
+}

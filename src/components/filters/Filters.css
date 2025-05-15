@@ -1,0 +1,201 @@
+.listFilters {
+    width: 120px;
+    height: 40px;
+    background-color: #BDE3FF;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.listFiltersCollapse {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 375px;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+.buildingFilters{
+    margin-left: 40px;
+}
+
+.listFiltersCollapse.collapse {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.collapseFiltersContainer {
+    background-color: white;
+    margin-top: 12px;
+    z-index: 9;
+    width: 500px;
+    border: solid 3px #086788;
+    border-radius: 10px;
+}
+
+.collapseFilter {
+    height: 20px;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-grow: 1;
+}
+
+.collapseFilterContainer, .collapseFilter {
+    transition: max-height 0.5s ease-out;
+}
+
+.filterImg {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.filterButton {
+    background-color: transparent;
+    border-color: #BDE3FF;
+    border-width: 3px;
+    color: black;
+    width: 200px;
+    margin: 10px;
+}
+
+.plusButton {
+    width: 60px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+}
+
+.plusImg {
+    width: 20px;
+}
+
+.filterRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 15px;
+    border-bottom: 1px solid #086788;
+    position: relative;
+}
+
+.filterRowHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.plusButton {
+    width: 60px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.component.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.filterButtonContainer {
+    display: flex;
+}
+
+.searchButton {
+    background-color: #086788;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.searchIcon {
+    width: 30px;
+}
+
+@media (max-width: 1100px) {
+    .listFilters {
+        margin-left: 70px;
+        margin-top: 5px;
+        margin-bottom: 50px;
+    }
+
+    .listFiltersCollapse {
+        left: 70px;
+        top: -50px;
+    }
+
+    .collapseFiltersContainer {
+        width: 320px;
+    }
+
+    .searchButton {
+        margin-top: 6px;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .listFiltersCollapse {
+        left: -275px;
+        top:50px;
+    }
+
+    .collapseFiltersContainer {
+        width: 320px;
+    }
+
+    .searchButton {
+        margin-top: 1px;
+    }
+
+    .buildingFilters{
+        margin-left: 250px;
+    }
+
+    .FeaturesFilters{
+        margin-left: 170px;
+    }
+
+
+}
+
+.filterButton{
+   margin-left: 50px;
+}
+
+
+
+
+

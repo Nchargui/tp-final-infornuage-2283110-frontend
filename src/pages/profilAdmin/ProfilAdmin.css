@@ -1,0 +1,7 @@
+.profileBodyBorder {
+    border: 3px solid #E1EDF9;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 20px 20px 20px;
+    overflow: hidden;
+}

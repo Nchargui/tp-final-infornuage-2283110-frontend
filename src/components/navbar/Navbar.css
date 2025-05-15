@@ -1,0 +1,141 @@
+.navbar {
+    background-color: #7CACBB;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+.navbarCollapse {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.navbarCollapse.collapse {
+    max-height: 500px;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.logo {
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+}
+
+.sideMenu {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 10px auto auto;
+}
+
+.sideMenu:hover {
+    border-color: white;
+}
+
+.sideMenuImg {
+    width: 40px;
+    height: 40px;
+}
+
+.homeBreeze {
+    margin-top: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+.img:hover, .homeBreeze:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 610px) {
+    .linkContainer {
+        margin-left: auto;
+        display: flex;
+    }
+
+    .link {
+        width: 100px;
+        height: 40px;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .formLink {
+        background-color: #BDE3FF;
+        color: black;
+    }
+
+    .formLink:hover {
+        border-color: #086788;
+        border-width: 3px;
+        background-color: #BDE3FF;
+        color: black;
+    }
+
+    .loginLink {
+        background-color: #086788;
+        color: white;
+    }
+
+    .loginLink:hover {
+        border-color: #BDE3FF;
+        border-width: 3px;
+        background-color: #086788;
+        color: white;
+    }
+
+    .sideMenu, .collapseLink {
+        display: none;
+    }
+}
+
+@media (max-width: 610px) {
+    .linkContainer, .link, .formLink, .loginLink {
+        display: none;
+    }
+
+    .collapseLinkContainer {
+        background-color: white;
+        margin-top: 12px;
+        z-index: 9;
+    }
+
+    .collapseLink {
+        height: 20px;
+        margin: 0;
+        color: black;
+        text-align: left;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #086788;
+    }
+
+    .collapseLink:hover {
+        color: #086788;
+    }
+
+    .collapseProfileLink {
+        border-bottom: 1px solid #086788;
+    }
+
+    .collapseProfileLink.collapsed {
+        display: flex;
+        align-items: center;
+    }
+}

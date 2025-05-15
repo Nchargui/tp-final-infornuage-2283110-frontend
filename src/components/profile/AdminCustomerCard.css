@@ -1,0 +1,83 @@
+.customerCard {
+    background: #BDE3FF;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.customerCardUser {
+    width: 50px;
+    height: 50px;
+}
+
+.customerCardUserCircle {
+    background: #086788;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.customerCardUserPicture {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+}
+
+.customerCardCredentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: black;
+    margin-bottom: 0;
+}
+
+.customerCardFullName {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.customerCardPersonalInfo {
+    font-size: 12px;
+    margin: 3px;
+}
+
+.customerCardButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.customerCardDeleteButton {
+    background: #FF6F61;
+    color: black;
+}
+
+.customerCardButtonIcon {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.customerCardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+

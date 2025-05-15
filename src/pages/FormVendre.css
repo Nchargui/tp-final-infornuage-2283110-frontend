@@ -1,0 +1,77 @@
+.startPage {
+    text-align: center;
+    color: #3134C8;
+    border: 3px solid #BDE3FF;
+    margin: 20px;
+    padding: 20px;
+}
+
+.startButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #086788;
+    color: white;
+    border: 3px solid #086788;
+}
+
+.propertyForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 50px auto;
+    gap: 10px;
+    color:black;
+}
+
+.propertyForm input {
+    padding: 8px;
+}
+
+.submitButton {
+    background-color: #086788;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 9999;
+
+}
+
+.popupContent {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 10000;
+}
+
+.popupButton1 {
+    background: #086788;
+    color: white;
+    border: 3px solid #086788;
+    margin: 3px;
+}
+
+.popupButton1:hover, .startButton:hover {
+    border-color: #BDE3FF;
+}
+
+.popupButton2 {
+    background: white;
+    border: 3px solid #086788;
+    color: black;
+    margin: 3px;
+}
+

@@ -1,0 +1,41 @@
+.categoryContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.categoryLabel {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 30px;
+}
+
+.categoryCheckbox {
+    background-color: #BDE3FF;
+    border: 2px solid #086788;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.categoryCheckbox:checked {
+    background-color: #086788;
+    border-color: #BDE3FF;
+}
+
+.categoryCheckbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

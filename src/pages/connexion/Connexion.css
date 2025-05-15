@@ -1,0 +1,183 @@
+.connectionBackground {
+    display: flex;
+    background-color: white;
+    padding: 50px;
+    height: 82vh;
+}
+
+.connectionContainer {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background-color: #BDE3FF;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px;
+}
+
+.formBox {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-align: center;
+    background-color: #BDE3FF;
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+}
+
+.connectionContainer.active .formBox {
+    right: 50%;
+}
+
+.formBox.register {
+    visibility: hidden;
+}
+
+.connectionContainer.active .formBox.register {
+    visibility: visible;
+}
+
+.formWidth {
+    width: 100%;
+}
+
+.container .connectionTitle {
+    font-size: 36px;
+    margin: -10px 0;
+}
+
+.connectionTitle {
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.connectionInputBox {
+    position: relative;
+    margin: 30px 0;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.connectionInputBox .connectionInput {
+    width: 50%;
+    padding: 13px 50px 13px 20px;
+    background-color: rgba(8, 103, 136, 0.5);
+    border: none;
+    border-radius: 5px;
+
+}
+
+.connectionSubmitButton {
+    width: 50%;
+    background-color: #086788;
+    border-color: #086788;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    color: white;
+}
+
+.toggleBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.toggleBox::before {
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background-color: #086788;
+    border-radius: 150px;
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+}
+
+.connectionContainer.active .toggleBox::before {
+    left: 50%;
+}
+
+.togglePanel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    transition: .6s ease-in-out;
+}
+
+.connectionContainer.active .togglePanel.toggleLeft {
+    left: -50%;
+    transition-delay: .6s;
+}
+
+.connectionContainer.active .togglePanel.toggleRight {
+    right: 0;
+    transition-delay: 1.2s;
+}
+
+.togglePanel.toggleRight {
+    right: -50%;
+    transition-delay: .6s;
+}
+
+.togglePanel.toggleLeft {
+    left: 0;
+    transition-delay: 1.2s;
+}
+
+.togglePanel .toggleText {
+    margin-bottom: 20px
+}
+
+.togglePanel .registerToggleButton, .loginToggleButton {
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+    color: white;
+}
+
+.registerToggleButton:hover, .loginToggleButton:hover {
+    background-color: white;
+    border-color: white;
+    color: #086788;
+    transition: 0.5s;
+}
+
+.toggleTitle {
+    font-size: 40px;
+}
+
+@media (max-width: 650px) {
+    .connectionTitle {
+        font-size: 30px;
+    }
+
+    .toggleTitle {
+        font-size: 30px;
+    }
+
+    .connectionContainer {
+        margin: 0;
+    }
+}

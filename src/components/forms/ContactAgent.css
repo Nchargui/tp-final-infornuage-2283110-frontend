@@ -1,0 +1,111 @@
+.formAgent {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+.formAgent input[type=text], select, textarea {
+    padding: 12px;
+    border : solid 1px #192175;
+    border-radius: 10px;
+    resize: vertical;
+    background: rgb(255, 255, 255);
+    margin: 20px;
+    width: 300px;
+    color: #192175;
+
+
+}
+
+.formAgent textarea[placeholder]{
+    color: #192175;
+}
+
+.formAgent h2{
+     color: #3134C8;
+}
+
+
+
+.formAgent {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formAgent button[type=submit] {
+    background-color: #3134C8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+
+
+}
+
+.formAgent .agentDetails {
+    text-align: start;
+    color: #3134C8;
+
+}
+
+.formAgent .agentSection{
+    padding-top: 20px;
+    text-align: start;
+    display: grid;
+
+}
+
+.formAgent .agentContainer{
+    background: transparent;
+    border-radius: 10px;
+    border: solid 1px #192175;
+}
+.formAgent label{
+    color: #3134C8;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    justify-content: start;
+}
+
+.formAgent .section1, .section2{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 600px) {
+
+    .formAgent .desc{
+        width: 300px;
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    .desc{
+        width: 300px;
+    }
+
+}@media (min-width: 900px) {
+
+    .desc{
+        width: 670px;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+
+    .desc{
+        width: 670px;
+    }
+
+
+}

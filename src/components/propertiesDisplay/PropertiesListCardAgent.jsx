@@ -12,6 +12,7 @@ import axios from "axios";
 // nadine
 function PropertiesListCardAgent() {
 
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const {idAgent} = useParams();
     const [tabProperty, setProperty] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));

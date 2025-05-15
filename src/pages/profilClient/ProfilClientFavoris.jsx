@@ -13,6 +13,9 @@ import ImagePropertyList from "../../components/propertiesDisplay/ImagePropertyL
 
 // kristina
 function ProfilClientFavoris() {
+
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
+
     const [activeTab, setActiveTab] = useState("favorites");
     const [favorites, setFavorites] = useState([]);
     const [heartStates, setHeartStates] = useState({});
@@ -31,7 +34,7 @@ function ProfilClientFavoris() {
     const loadFavorites = async () => {
         if (!user) return;
         try {
-            const res = await axios.get(`http://localhost:9696/Favorites/${user.idUser}`);
+            const res = await axios.get(`${VITE_API_URL}/Favorites/${user.idUser}`);
             setFavorites(res.data);
             const initialHearts = {};
             res.data.forEach(fav => {
@@ -53,7 +56,7 @@ function ProfilClientFavoris() {
     const toggleHeart = async (favId, propertyId) => {
         if (window.confirm("Remove from favorites?")) {
             try {
-                await axios.delete(`http://localhost:9696/Favorites/${favId}`);
+                await axios.delete(`${VITE_API_URL}/Favorites/${favId}`);
                 setFavorites(favorites.filter(fav => {
                     const prop = fav.propertySale || fav.propertyRent;
                     return prop?.idProperty !== propertyId;

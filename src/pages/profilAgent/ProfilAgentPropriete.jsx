@@ -13,6 +13,8 @@ import ImagePropertyList from "../../components/propertiesDisplay/ImagePropertyL
 
 // kristina
 function ProfilAgentPropriete() {
+
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [activeTab, setActiveTab] = useState("properties");
     const [properties, setProperties] = useState([]);
     const navigate = useNavigate();
@@ -34,8 +36,8 @@ function ProfilAgentPropriete() {
         if (!user) return;
         try {
             const [saleRes, rentRes] = await Promise.all([
-                axios.get(`http://localhost:9696/PropertySale/agent/${user.idUser}`),
-                axios.get(`http://localhost:9696/PropertyRent/agent/${user.idUser}`)
+                axios.get(`${VITE_API_URL}/PropertySale/agent/${user.idUser}`),
+                axios.get(`${VITE_API_URL}/PropertyRent/agent/${user.idUser}`)
             ]);
             const combinedProperties = [
                 ...saleRes.data.map(p => ({ ...p, typeProperty: "sale" })),

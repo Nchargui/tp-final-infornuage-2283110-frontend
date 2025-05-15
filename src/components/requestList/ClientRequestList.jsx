@@ -13,8 +13,8 @@ function ClientRequestList() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     const data = [
-        `http://localhost:9696/RequestRent/customer/${user.idUser}`,
-        `http://localhost:9696/RequestSale/customer/${user.idUser}`,
+        `${VITE_API_URL}/RequestRent/customer/${user.idUser}`,
+        `${VITE_API_URL}/RequestSale/customer/${user.idUser}`,
     ];
 
 
@@ -30,7 +30,7 @@ function ClientRequestList() {
     }
 
     const deleteRequest = async (id, propertyType) => {
-        await axios.delete(`http://localhost:9696/Request${propertyType}/deleteRequest/${id}`);
+        await axios.delete(`${VITE_API_URL}/Request${propertyType}/deleteRequest/${id}`);
         await loadRequests();
 
     };

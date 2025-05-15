@@ -6,6 +6,8 @@ import "./Form.css";
 
 // kristina
 function FormLouer() {
+
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [started, setStarted] = useState(false);
     const [showLoginPopup, setShowLoginPopup] = useState(false);
     const [showErrorPopup, setShowErrorPopup] = useState(false);

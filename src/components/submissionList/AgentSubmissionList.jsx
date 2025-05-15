@@ -11,12 +11,15 @@ import { FaLocationDot } from "react-icons/fa6";
 
 /// kristina
 function AgentSubmissionList() {
+    
+    
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [submissions, setSubmissions] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));
 
     const endpoints = [
-        "http://localhost:9696/PropertyRent/pending",
-        "http://localhost:9696/PropertySale/pending"
+        "${VITE_API_URL}/PropertyRent/pending",
+        "${VITE_API_URL}/PropertySale/pending"
     ];
 
     const loadSubmissions = async () => {
@@ -35,8 +38,8 @@ function AgentSubmissionList() {
 
     const acceptSubmission = async (id, type) => {
         try {
-            await axios.put(`http://localhost:9696/Property${type}/accept/${id}`);
-            await axios.put(`http://localhost:9696/Property${type}/updateOwner${id}`, null, {
+            await axios.put(`${VITE_API_URL}/Property${type}/accept/${id}`);
+            await axios.put(`${VITE_API_URL}/Property${type}/updateOwner${id}`, null, {
                 params: { idUser: user.idUser }
             });
             removeSubmissionLocally(id);
@@ -47,7 +50,7 @@ function AgentSubmissionList() {
 
     const refuseSubmission = async (id, type) => {
         try {
-            await axios.put(`http://localhost:9696/Property${type}/refuse/${id}`);
+            await axios.put(`${VITE_API_URL}/Property${type}/refuse/${id}`);
             removeSubmissionLocally(id);
         } catch (error) {
             console.error("Error refusing submission:", error);

@@ -10,12 +10,14 @@ import ImagePropertyList from "../propertiesDisplay/ImagePropertyList.jsx";
 
 // nadine
 function AgentRequestList() {
+    
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
 
     const [tabRequests, setRequests] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));
     const data = [
-        `http://localhost:9696/RequestRent/agent/${user.idUser}`,
-        `http://localhost:9696/RequestSale/agent/${user.idUser}`,
+        `${VITE_API_URL}RequestRent/agent/${user.idUser}`,
+        `${VITE_API_URL}RequestSale/agent/${user.idUser}`,
     ];
 
 
@@ -35,7 +37,7 @@ function AgentRequestList() {
 
     const acceptRequest = async (id, typeDemande) => {
         try {
-            await axios.put(`http://localhost:9696/Request${typeDemande}/accept/${id}`)
+            await axios.put(`${VITE_API_URL}Request${typeDemande}/accept/${id}`)
 
         } catch (error) {
             console.log("Request put failed: " + error)
@@ -44,7 +46,7 @@ function AgentRequestList() {
 
     const declineRequest = async (id, typeDemande) => {
         try {
-            await axios.put(`http://localhost:9696/Request${typeDemande}/refuse/${id}`)
+            await axios.put(`${VITE_API_URL}Request${typeDemande}/refuse/${id}`)
 
         } catch (error) {
             console.log("Request put failed: " + error)
@@ -54,7 +56,7 @@ function AgentRequestList() {
     const updateOwner = async (id, typeDemande, idUser) => {
         try {
 
-            await axios.put(`http://localhost:9696/Request${typeDemande}/updatePerson/${id}/${idUser}`)
+            await axios.put(`${VITE_API_URL}Request${typeDemande}/updatePerson/${id}/${idUser}`)
 
         } catch (error) {
             console.log(("Updating owner failed because of: " + error))

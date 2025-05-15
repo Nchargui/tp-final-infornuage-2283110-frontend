@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 // kristina
 function Connexion() {
+
+    
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [isActive, setIsActive] = useState(false);
     const navigate = useNavigate();
 
@@ -23,7 +26,7 @@ function Connexion() {
         const password = e.target[1].value;
 
         try {
-            const res = await fetch("http://localhost:9696/Auth/login", {
+            const res = await fetch(`${VITE_API_URL}/Auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -55,14 +58,14 @@ function Connexion() {
         const password = e.target[4].value;
 
         try {
-            const res = await fetch("http://localhost:9696/Auth/register", {
+            const res = await fetch(`${VITE_API_URL}/Auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ fname, lname, email, phone, password }),
             });
 
             if (res.ok) {
-                const loginRes = await fetch("http://localhost:9696/Auth/login", {
+                const loginRes = await fetch(`${VITE_API_URL}/Auth/login`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email, password }),

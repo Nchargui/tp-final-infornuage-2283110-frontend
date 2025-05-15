@@ -50,7 +50,7 @@ function ContactAgentForm() {
 
     const loadProperty = async () => {
         try {
-            const result = await axios.get(`http://localhost:9696/Property${typeProperty}/${id}`);
+            const result = await axios.get(`${VITE_API_URL}/Property${typeProperty}/${id}`);
             setProperty(result.data);
 
         } catch (error) {
@@ -84,7 +84,7 @@ function ContactAgentForm() {
 ////////////////////////////handling submits/////////////////////////////////////////////////////////
     const submitRequest = async () => {
         try {
-            axios.post(`http://localhost:9696/Request${typeProperty}/createRequest`, formRequest);
+            axios.post(`${VITE_API_URL}/Request${typeProperty}/createRequest`, formRequest);
             navigate("/customerProfileFavorites");
 
 

@@ -30,6 +30,7 @@ function PropertiesListCard(propsFilters) { // par défaut, les filtres seront n
         propertyType = 'Rent'
     } = propsFilters;
 
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [tabProperty, setProperty] = useState([]);
     const [heartStates, setHeartStates] = useState({});
     const [favoritesMap, setFavoritesMap] = useState({});
@@ -40,7 +41,7 @@ function PropertiesListCard(propsFilters) { // par défaut, les filtres seront n
 
     const loadAllProperty = async () => {
         try {
-            const result = await axios.get(`http://localhost:9696/Property${propertyType}/filtre?minPrice=${minPrice}&maxPrice=${maxPrice}&nbRooms=${nbRooms}&nbBathrooms=${nbBathrooms}&nbParking=${nbParking}&nbGarages=${nbGarages}&minArea=${minArea}&maxArea=${maxArea}&minYear=${minYear}&maxYear=${maxYear}&categorie=${categorie}&city=${city}`);
+            const result = await axios.get(`${VITE_API_URL}/Property${propertyType}/filtre?minPrice=${minPrice}&maxPrice=${maxPrice}&nbRooms=${nbRooms}&nbBathrooms=${nbBathrooms}&nbParking=${nbParking}&nbGarages=${nbGarages}&minArea=${minArea}&maxArea=${maxArea}&minYear=${minYear}&maxYear=${maxYear}&categorie=${categorie}&city=${city}`);
 
             if(user){
                 setProperty(result.data.filter(property => property.customer?.id !== user.idUser && property.occupant?.id !== user.idUser && property.isAvailable === true));
@@ -61,7 +62,7 @@ function PropertiesListCard(propsFilters) { // par défaut, les filtres seront n
     const loadFavorites = async () => {
         if (!user) return;
         try {
-            const res = await axios.get(`http://localhost:9696/Favorites/${user.idUser}`);
+            const res = await axios.get(`${VITE_API_URL}/Favorites/${user.idUser}`);
             const map = {};
             res.data.forEach(fav => {
                 const property = fav.propertySale || fav.propertyRent;
@@ -99,7 +100,7 @@ function PropertiesListCard(propsFilters) { // par défaut, les filtres seront n
             try {
                 const favId = favoritesMap[propertyId];
                 if (favId) {
-                    await axios.delete(`http://localhost:9696/Favorites/${favId}`);
+                    await axios.delete(`${VITE_API_URL}/Favorites/${favId}`);
                     setHeartStates(prev => ({ ...prev, [propertyId]: false }));
                     const updatedMap = { ...favoritesMap };
                     delete updatedMap[propertyId];
@@ -110,7 +111,7 @@ function PropertiesListCard(propsFilters) { // par défaut, les filtres seront n
             }
         } else {
             try {
-                const res = await axios.post(`http://localhost:9696/Favorites/addFavorite`, null, {
+                const res = await axios.post(`${VITE_API_URL}/Favorites/addFavorite`, null, {
                     params: {
                         customerId: user.idUser,
                         propertyId: propertyId,

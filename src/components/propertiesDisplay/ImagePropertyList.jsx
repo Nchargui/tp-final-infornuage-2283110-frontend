@@ -12,12 +12,12 @@ import "./propertiesDisplay.css"
 // nadine
 function ImagePropertyList(props) {
 
-
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [tabImages, setImages] = useState([]);
 
     const loadAllImagesByPropertyId = async () => {
         try {
-            const result = await axios.get(`http://localhost:9696/ImageProperty${props.typeProprety}/getAllImagesByPropertyId?propertyIdProperty=${props.idPropriete}`);
+            const result = await axios.get(`${VITE_API_URL}/ImageProperty${props.typeProprety}/getAllImagesByPropertyId?propertyIdProperty=${props.idPropriete}`);
             setImages(result.data);
 
         }catch (error){

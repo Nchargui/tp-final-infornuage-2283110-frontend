@@ -18,8 +18,8 @@ function AgentSubmissionList() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     const endpoints = [
-        "${VITE_API_URL}/PropertyRent/pending",
-        "${VITE_API_URL}/PropertySale/pending"
+        `${VITE_API_URL}/PropertyRent/pending`,
+        `${VITE_API_URL}/PropertySale/pending`
     ];
 
     const loadSubmissions = async () => {

@@ -12,7 +12,7 @@ import {BiSolidCarGarage} from "react-icons/bi";
 // nadine
 function PropertyView() {
 
-
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const {id, typeProperty} = useParams()
     const [property, setProperty] = useState({});
     const [showLoginPopup, setShowLoginPopup] = useState(false);

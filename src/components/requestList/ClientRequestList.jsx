@@ -9,6 +9,7 @@ import {Link} from "react-router-dom";
 // nadine
 function ClientRequestList() {
 
+    const VITE_API_URL = import.meta.env.VITE_API_URL || ""
     const [tabRequests, setRequests] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));
 

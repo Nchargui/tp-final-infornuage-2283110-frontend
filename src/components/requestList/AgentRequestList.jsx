@@ -12,7 +12,6 @@ import ImagePropertyList from "../propertiesDisplay/ImagePropertyList.jsx";
 function AgentRequestList() {
     
     const VITE_API_URL = import.meta.env.VITE_API_URL || ""
-
     const [tabRequests, setRequests] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));
     const data = [

@@ -15,8 +15,8 @@ function AgentRequestList() {
     const [tabRequests, setRequests] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));
     const data = [
-        `${VITE_API_URL}RequestRent/agent/${user.idUser}`,
-        `${VITE_API_URL}RequestSale/agent/${user.idUser}`,
+        `${VITE_API_URL}/RequestRent/agent/${user.idUser}`,
+        `${VITE_API_URL}/RequestSale/agent/${user.idUser}`,
     ];
 
 
@@ -36,7 +36,7 @@ function AgentRequestList() {
 
     const acceptRequest = async (id, typeDemande) => {
         try {
-            await axios.put(`${VITE_API_URL}Request${typeDemande}/accept/${id}`)
+            await axios.put(`${VITE_API_URL}/Request${typeDemande}/accept/${id}`)
 
         } catch (error) {
             console.log("Request put failed: " + error)
@@ -45,7 +45,7 @@ function AgentRequestList() {
 
     const declineRequest = async (id, typeDemande) => {
         try {
-            await axios.put(`${VITE_API_URL}Request${typeDemande}/refuse/${id}`)
+            await axios.put(`${VITE_API_URL}/Request${typeDemande}/refuse/${id}`)
 
         } catch (error) {
             console.log("Request put failed: " + error)
@@ -55,7 +55,7 @@ function AgentRequestList() {
     const updateOwner = async (id, typeDemande, idUser) => {
         try {
 
-            await axios.put(`${VITE_API_URL}Request${typeDemande}/updatePerson/${id}/${idUser}`)
+            await axios.put(`${VITE_API_URL}/Request${typeDemande}/updatePerson/${id}/${idUser}`)
 
         } catch (error) {
             console.log(("Updating owner failed because of: " + error))

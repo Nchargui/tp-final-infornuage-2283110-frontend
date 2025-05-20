@@ -20,8 +20,8 @@ function ProfilClientSoumission() {
     const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
 
     const data = [
-        `${VITE_API_URL}/PropertyRent/customer/${storedUser.idUser}`,
-        `${VITE_API_URL}/PropertySale/customer/${storedUser.idUser}`,
+        `${VITE_API_URL}api/PropertyRent/customer/${storedUser.idUser}`,
+        `${VITE_API_URL}api/PropertySale/customer/${storedUser.idUser}`,
     ];
 
     useEffect(() => {

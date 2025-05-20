@@ -9,7 +9,7 @@ function AdminCustomerList() {
     useEffect(() => {
         const fetchCustomers = async () => {
             try {
-                const res = await fetch(`${VITE_API_URL}/Customer/listCustomers`);
+                const res = await fetch(`${VITE_API_URL}api/Customer/listCustomers`);
                 if (res.ok) {
                     const data = await res.json();
                     setCustomers(data);

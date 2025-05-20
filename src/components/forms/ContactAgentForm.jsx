@@ -50,7 +50,7 @@ function ContactAgentForm() {
 
     const loadProperty = async () => {
         try {
-            const result = await axios.get(`${VITE_API_URL}/Property${typeProperty}/${id}`);
+            const result = await axios.get(`${VITE_API_URL}api/Property${typeProperty}/${id}`);
             setProperty(result.data);
 
         } catch (error) {
@@ -61,7 +61,7 @@ function ContactAgentForm() {
 
     const getAlreadyApplied = async () => {
         try {
-            const result = await axios.get(`${VITE_API_URL}/Request${typeProperty}/verifyRequest/${user.idUser}/${id}`);
+            const result = await axios.get(`${VITE_API_URL}api/Request${typeProperty}/verifyRequest/${user.idUser}/${id}`);
             setApplied(result.data);
 
         } catch (error) {
@@ -84,7 +84,7 @@ function ContactAgentForm() {
 ////////////////////////////handling submits/////////////////////////////////////////////////////////
     const submitRequest = async () => {
         try {
-            axios.post(`${VITE_API_URL}/Request${typeProperty}/createRequest`, formRequest);
+            axios.post(`${VITE_API_URL}api/Request${typeProperty}/createRequest`, formRequest);
             navigate("/customerProfileFavorites");
 
 

@@ -36,8 +36,8 @@ function ProfilAgentPropriete() {
         if (!user) return;
         try {
             const [saleRes, rentRes] = await Promise.all([
-                axios.get(`${VITE_API_URL}/PropertySale/agent/${user.idUser}`),
-                axios.get(`${VITE_API_URL}/PropertyRent/agent/${user.idUser}`)
+                axios.get(`${VITE_API_URL}api/PropertySale/agent/${user.idUser}`),
+                axios.get(`${VITE_API_URL}api/PropertyRent/agent/${user.idUser}`)
             ]);
             const combinedProperties = [
                 ...saleRes.data.map(p => ({ ...p, typeProperty: "sale" })),

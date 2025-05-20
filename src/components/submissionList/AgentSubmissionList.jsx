@@ -18,8 +18,8 @@ function AgentSubmissionList() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     const endpoints = [
-        `${VITE_API_URL}/PropertyRent/pending`,
-        `${VITE_API_URL}/PropertySale/pending`
+        `${VITE_API_URL}api/PropertyRent/pending`,
+        `${VITE_API_URL}api/PropertySale/pending`
     ];
 
     const loadSubmissions = async () => {
@@ -38,8 +38,8 @@ function AgentSubmissionList() {
 
     const acceptSubmission = async (id, type) => {
         try {
-            await axios.put(`${VITE_API_URL}/Property${type}/accept/${id}`);
-            await axios.put(`${VITE_API_URL}/Property${type}/updateOwner${id}`, null, {
+            await axios.put(`${VITE_API_URL}api/Property${type}/accept/${id}`);
+            await axios.put(`${VITE_API_URL}api/Property${type}/updateOwner${id}`, null, {
                 params: { idUser: user.idUser }
             });
             removeSubmissionLocally(id);
@@ -50,7 +50,7 @@ function AgentSubmissionList() {
 
     const refuseSubmission = async (id, type) => {
         try {
-            await axios.put(`${VITE_API_URL}/Property${type}/refuse/${id}`);
+            await axios.put(`${VITE_API_URL}api/Property${type}/refuse/${id}`);
             removeSubmissionLocally(id);
         } catch (error) {
             console.error("Error refusing submission:", error);

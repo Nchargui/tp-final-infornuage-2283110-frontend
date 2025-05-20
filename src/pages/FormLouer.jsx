@@ -84,7 +84,7 @@ function FormLouer() {
         e.preventDefault();
         try {
             const user = JSON.parse(localStorage.getItem("user"));
-            const res = await fetch(`${VITE_API_URL}/PropertyRent`, {
+            const res = await fetch(`${VITE_API_URL}api/PropertyRent`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

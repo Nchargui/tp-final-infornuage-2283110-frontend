@@ -34,7 +34,7 @@ function ProfilClientFavoris() {
     const loadFavorites = async () => {
         if (!user) return;
         try {
-            const res = await axios.get(`${VITE_API_URL}/Favorites/${user.idUser}`);
+            const res = await axios.get(`${VITE_API_URL}api/Favorites/${user.idUser}`);
             setFavorites(res.data);
             const initialHearts = {};
             res.data.forEach(fav => {

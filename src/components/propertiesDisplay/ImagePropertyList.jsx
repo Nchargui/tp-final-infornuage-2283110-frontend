@@ -17,7 +17,7 @@ function ImagePropertyList(props) {
 
     const loadAllImagesByPropertyId = async () => {
         try {
-            const result = await axios.get(`${VITE_API_URL}/ImageProperty${props.typeProprety}/getAllImagesByPropertyId?propertyIdProperty=${props.idPropriete}`);
+            const result = await axios.get(`${VITE_API_URL}api/ImageProperty${props.typeProprety}/getAllImagesByPropertyId?propertyIdProperty=${props.idPropriete}`);
             setImages(result.data);
 
         }catch (error){

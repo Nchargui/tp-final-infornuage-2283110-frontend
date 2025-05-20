@@ -26,7 +26,7 @@ function Connexion() {
         const password = e.target[1].value;
 
         try {
-            const res = await fetch(`${VITE_API_URL}api/Auth/login`, {
+            const res = await fetch(`${VITE_API_URL}/api/Auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -58,14 +58,14 @@ function Connexion() {
         const password = e.target[4].value;
 
         try {
-            const res = await fetch(`${VITE_API_URL}api/Auth/register`, {
+            const res = await fetch(`${VITE_API_URL}/api/Auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ fname, lname, email, phone, password }),
             });
 
             if (res.ok) {
-                const loginRes = await fetch(`${VITE_API_URL}api/Auth/login`, {
+                const loginRes = await fetch(`${VITE_API_URL}/api/Auth/login`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email, password }),

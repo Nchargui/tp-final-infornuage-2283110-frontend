@@ -19,8 +19,8 @@ function PropertiesListCardAgent() {
 
 
     const data = [
-        `${VITE_API_URL}api/PropertySale/agent/${idAgent}`,
-        `${VITE_API_URL}api/PropertyRent/agent/${idAgent}`,
+        `${VITE_API_URL}/api/PropertySale/agent/${idAgent}`,
+        `${VITE_API_URL}/api/PropertyRent/agent/${idAgent}`,
     ];
 
 
